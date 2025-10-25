@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website built with React and Vite, featuring smooth AOS (Animate On Scroll) animations.
 
+Live Demo: [https://smarty-portfolio.netlify.app/]
+
 ## 🚀 Features
 
 - **Responsive Design**: Works perfectly on all devices
