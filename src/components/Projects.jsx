@@ -7,9 +7,11 @@ import { MdWork, MdTimer } from 'react-icons/md'
 // public/images/pos-screenshot.png (Marty's Karenderia)
 // public/images/crm-screenshot.png (SimpleCRM Dashboard)
 // public/images/churchsite-screenshot.png (Church Website)
+// public/images/pulox-screenshot.png (Pulox Project)
 const posScreenshot = '/images/pos-screenshot.png'
 const crmScreenshot = '/images/crm-screenshot.png'
 const churchScreenshot = '/images/churchsite-screenshot.png'
+const puloxScreenshot = '/images/pulox-screenshot.png'
 
 const Projects = () => {
   const [failedImages, setFailedImages] = useState(new Set())
@@ -32,17 +34,6 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'SimpleCRM Dashboard',
-      subtitle: 'Customer Relationship Management',
-      description: 'A comprehensive customer relationship management application built with ASP.NET Core MVC. Features customer management, agent management, timesheet tracking for agents, and interactive dashboard with summary statistics.',
-      image: crmScreenshot,
-      technologies: ['ASP.NET Core MVC', 'SQLite', 'C#', 'Entity Framework Core', 'Bootstrap'],
-      category: 'Web Application',
-      status: 'In Progress',
-      githubUrl: 'https://github.com/ddtbone1/SimpleCRM',
-    },
-    {
-      id: 3,
       title: 'Church Website',
       subtitle: 'Religious Community Platform',
       description: 'A modern and responsive church website built with React and modern web technologies. Features include service information, event calendar, ministry details, online donations, and community engagement tools.',
@@ -51,6 +42,19 @@ const Projects = () => {
       category: 'Web Application',
       status: 'In Progress',
       githubUrl: 'https://github.com/ddtbone1/church-website',
+      liveUrl: 'https://basakbiblebaptistchurch.netlify.app/',
+    },
+    {
+      id: 3,
+      title: 'Pulox',
+      subtitle: 'Hybrid Post-ASR Error Correction and Summarization Pipeline',
+      description: 'An innovative machine learning application for English-Tagalog classroom lecture transcripts. Features hybrid post-ASR error correction and summarization pipeline using neural networks and OpenAI ASR technology.',
+      image: puloxScreenshot,
+      technologies: ['Electron', 'OpenAI ASR', 'Python', 'HTML/CSS', 'Neural Networks', 'Machine Learning'],
+      category: 'Machine Learning Application',
+      status: 'In Progress',
+      githubUrl: 'https://github.com/ddtbone1/pulox',
+      liveUrl: 'https://pulox.netlify.app/',
     }
   ]
 
@@ -98,9 +102,22 @@ const Projects = () => {
                     >
                       <FaGithub />
                     </a>
-                    <div className="portfolio-link portfolio-link-demo">
-                      <FaExternalLinkAlt />
-                    </div>
+                    {project.liveUrl && project.liveUrl !== 'YOUR_DOMAIN_HERE' && (
+                      <a 
+                        href={project.liveUrl}
+                        className="portfolio-link portfolio-link-demo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="View Live Demo"
+                      >
+                        <FaExternalLinkAlt />
+                      </a>
+                    )}
+                    {(!project.liveUrl || project.liveUrl === 'YOUR_DOMAIN_HERE') && (
+                      <div className="portfolio-link portfolio-link-demo">
+                        <FaExternalLinkAlt />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

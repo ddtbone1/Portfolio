@@ -37,15 +37,12 @@ const Home = () => {
           </div>
         </div>
         <div className="hero-image" data-aos="fade-left" data-aos-delay="600">
-          <div className="image-placeholder">
-            <div className="default-avatar">
-              <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="60" cy="60" r="60" fill="rgba(255,255,255,0.1)"/>
-                <circle cx="60" cy="45" r="20" fill="rgba(255,255,255,0.8)"/>
-                <path d="M60 75C45 75 25 85 25 100V110H95V100C95 85 75 75 60 75Z" fill="rgba(255,255,255,0.8)"/>
-              </svg>
-            </div>
-            <span>Karl Edu Martin Gomez</span>
+          <div className="profile-image-container">
+            <img 
+              src="/images/profile-picture.png" 
+              alt="Karl Edu Martin Gomez - Software Developer" 
+              className="profile-picture"
+            />
           </div>
         </div>
       </div>
