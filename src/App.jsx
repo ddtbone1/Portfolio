@@ -5,6 +5,7 @@ import './App.css'
 import Home from './components/Home'
 import Skills from './components/Skills'
 import TechStacks from './components/TechStacks'
+import Projects from './components/Projects'
 import Contact from './components/Contact'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Home />
       <Skills />
       <TechStacks />
+      <Projects />
       <Contact />
     </div>
   )

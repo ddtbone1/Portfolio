@@ -11,7 +11,7 @@ const TechStacks = () => {
     {
       title: 'Backend Development',
       icon: '⚙️',
-      technologies: ['ASP.NET Core', 'C#', 'Web API', 'MVC', 'Razor Pages', 'RESTful APIs'],
+      technologies: ['ASP.NET Core', 'C#', 'Web API', 'MVC', 'RESTful APIs'],
       description: 'Creating robust server-side applications with Microsoft technologies'
     },
     {
